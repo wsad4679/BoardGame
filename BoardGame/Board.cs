@@ -1,26 +1,66 @@
+using Characters;
 namespace Gameplay;
 
 class Board
 {
-    //1 rozmiar planszy x
-    //2 rozmiar planszy y
-    //3 romiar planszy z
-    
-    // 1, 2, 3 to metody tworzące plansze z losowymi zdarzeniami
-
-    private void BonusPoints()
+    private int Fields = 24;
+    private static Random random = new Random();
+    static public Dictionary<int, int> BonusPoints()
     {
-        // zwraca liczbę punktów z jakiegoś zakresu jakie będą na tych polach
+        int numbersOfBonusPoints = random.Next(5, 10);
+        var bonusPointsFields = new Dictionary<int, int>();
+        for (int i = 0; i <= numbersOfBonusPoints; i++)
+        {
+            
+            int field = random.Next(1, 25);
+            int points = random.Next(1,11);
+
+            if (!bonusPointsFields.ContainsKey(field))
+            {
+                bonusPointsFields.Add(field, points);
+            }
+            
+            
+        }
+        return bonusPointsFields;
     }
 
-    private void Debuff()
+    private Dictionary<int, int> Debuff(Dictionary<int, int> BonusPointsFields)
     {
-        // gracz traci liczbę punktów z jakiegoś zakresu
+        int numbersOfBonusPoints = random.Next(1, 10);
+        var minusPointsFields = new Dictionary<int, int>();
+        for (int i = 0; i <= numbersOfBonusPoints; i++)
+        {
+            int field = random.Next(1, 25);
+            int points = random.Next(1,6);
+
+            if (!BonusPointsFields.ContainsKey(field) && !minusPointsFields.ContainsKey(field))
+            {
+                minusPointsFields.Add(field, points);
+            }
+            
+        }
+
+        return minusPointsFields;
     }
 
-    private void Monster()
+    private Dictionary<int, Monster> MonsterFields()
     {
-        // gracz spotyka potwora ze statystykami z losowego zakresu 
+        var monsterFields = new Dictionary<int, Monster>();
+        for (int i = 0; i <=5; i++)
+        {
+            int field = random.Next(1, 25);
+            if (!monsterFields.ContainsKey(field))
+            {
+                monsterFields.Add(field, new Monster());
+            }
+            else
+            {
+                i--;
+            }
+        }
+        return monsterFields;
     }
+
 
 }
