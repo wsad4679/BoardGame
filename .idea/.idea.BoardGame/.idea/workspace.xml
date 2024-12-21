@@ -7,7 +7,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="082cd840-c009-4148-a6a3-8d412a24850e" name="Changes" comment="" />
+    <list default="true" id="082cd840-c009-4148-a6a3-8d412a24850e" name="Changes" comment="Start Board Game app, create sketch">
+      <change afterPath="$PROJECT_DIR$/BoardGame/Board.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardGame/Characters.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardGame/Game.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BoardGame/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.BoardGame/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoardGame/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Program.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,6 +23,16 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/wsad4679/BoardGame.git",
+    "accountId": "3b233fa8-4abe-4926-a540-06b8b23530fe"
+  }
+}]]></component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
   <component name="ProjectColorInfo"><![CDATA[{
   "associatedIndex": 7
 }]]></component>
@@ -28,6 +45,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,15 +82,38 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1734814896091</updated>
-      <workItem from="1734814897222" duration="3432000" />
+      <workItem from="1734814897222" duration="3762000" />
     </task>
+    <task id="LOCAL-00001" summary="Start Board Game app, create sketch">
+      <option name="closed" value="true" />
+      <created>1734818435482</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1734818435482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Start Board Game app, create sketch" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start Board Game app, create sketch" />
   </component>
 </project>
