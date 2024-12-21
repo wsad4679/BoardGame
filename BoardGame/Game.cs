@@ -1,5 +1,6 @@
 namespace Gameplay;
 
+
 class Game
 {
     private void StartGame(int playersNumber)
@@ -21,5 +22,23 @@ class Game
     private void Fight()
     {
     }
+    
+    
+
+
+}
+
+class Dice
+{
+    static public int RollMoveDice()
+    {
+        return new Random().Next(0, 7);
+    }
+
+    static public int RollAttackMultiply()
+    {
+        return new Random().Next(0, 7);
+    }
+    
 
 }
