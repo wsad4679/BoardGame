@@ -63,7 +63,7 @@ class Game
         else if (debuffPoints.ContainsKey(position))
         {
             players[i].UpdateScore(debuffPoints[position]);
-            Console.WriteLine($"Otrzymano {bonusPoints[position]} punktów. ");
+            Console.WriteLine($"Otrzymano {debuffPoints[position]} punktów. ");
             if (players[i].Character is Mage)
             {
                 if (players[i].Character.SpecialPower() == 1)
