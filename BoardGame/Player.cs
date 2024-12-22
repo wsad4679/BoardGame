@@ -4,7 +4,7 @@ class Player
     public string Name { get; set; }
     public int Position = 0;
     public int Score = 0;
-    //public int HP = ;//nie wiem jak dodac hp z klasy characters
+    
     public ICharacterType Character { get; set; }
 
     public Player(string name)
