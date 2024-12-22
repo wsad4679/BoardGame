@@ -18,7 +18,7 @@ class Player
         Score += addScore;
     }
 
-    private int characterMove(int diceOutcome)
+    public int CharacterMove(int diceOutcome)
     {
         Position += diceOutcome;
         if (Position > 25)

@@ -1,19 +1,44 @@
 namespace Gameplay;
+using Gameplay;
+using  Characters;
 
 
 class Game
 {
-    private void StartGame(int playersNumber)
+    private List<Player> CreateGame(int playersNumber)
     {
-        // dla 1 gracza 
-
-        //dla 2 - 4 graczy
+        
+            var players = new List<Player>();
+            for (int i = 1; i <= playersNumber; i++)
+            {
+                Console.WriteLine($"Podaj imie postaci gracza {i} : ");
+                string name = Console.ReadLine();
+                players.Add(new Player(name));
+            }
+            return players;
+           
     }
 
 
-    private void PlayGame()
+    private void PlayGame(int playersNumber)
     {
-        // gra trwa 10 tur while (tury <10)
+        var bonusPoints = Board.BonusPoints();
+        var debuffPoints = Board.Debuff(bonusPoints);
+        var monsterFields = Board.MonsterFields(bonusPoints, debuffPoints);
+        var players = CreateGame(playersNumber);
+        int tury = 0;
+        while (tury < 5)
+        {
+            for (int i = 0; i < players.Count; i++)
+            {
+                players[i].CharacterMove(Dice.RollMoveDice());
+
+            }
+
+            tury++;
+        }
+
+        // gra trwa 5 tur while (tury <5)
         //for (i = 1; i<=liczba graczy; i++)
         //{tutaj całe metody funkcje gry}
         //funkca po wszystkim na wyświetlenie wyników
@@ -22,9 +47,8 @@ class Game
     private void Fight()
     {
     }
-    
-    
 
+    
 
 }
 
