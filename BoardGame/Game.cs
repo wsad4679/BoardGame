@@ -5,7 +5,7 @@ using  Characters;
 
 class Game
 {
-    private List<Player> CreateGame(int playersNumber)
+    static private List<Player> CreateGame(int playersNumber)
     {
         
             var players = new List<Player>();
@@ -20,7 +20,7 @@ class Game
     }
 
 
-    private void PlayGame(int playersNumber)
+    static public void PlayGame(int playersNumber)
     {
         var bonusPoints = Board.BonusPoints();
         var debuffPoints = Board.Debuff(bonusPoints);
@@ -31,24 +31,77 @@ class Game
         {
             for (int i = 0; i < players.Count; i++)
             {
-                players[i].CharacterMove(Dice.RollMoveDice());
+                Move(players, debuffPoints, bonusPoints, monsterFields, i);
 
             }
 
             tury++;
         }
-
-        // gra trwa 5 tur while (tury <5)
-        //for (i = 1; i<=liczba graczy; i++)
-        //{tutaj całe metody funkcje gry}
-        //funkca po wszystkim na wyświetlenie wyników
+        
     }
 
-    private void Fight()
+    static private void Fight()
     {
     }
 
-    
+    static public void Move(List<Player> players, Dictionary<int,int> debuffPoints,Dictionary<int,int> bonusPoints, Dictionary<int,Monster> monsterFields, int i)
+    {
+        var position = players[i].CharacterMove(Dice.RollMoveDice());
+
+        if (bonusPoints.ContainsKey(position))
+        {
+            players[i].UpdateScore(bonusPoints[position]);
+            Console.WriteLine($"Otrzymano {bonusPoints[position]} punktów. ");
+            if (players[i].Character is Mage)
+            {
+                if (players[i].Character.SpecialPower() == 1)
+                {
+                    Move(players, debuffPoints, bonusPoints, monsterFields, i);
+                }
+            }
+        }
+        else if (debuffPoints.ContainsKey(position))
+        {
+            players[i].UpdateScore(debuffPoints[position]);
+            Console.WriteLine($"Otrzymano {bonusPoints[position]} punktów. ");
+            if (players[i].Character is Mage)
+            {
+                if (players[i].Character.SpecialPower() == 1)
+                {
+                    Move(players, debuffPoints, bonusPoints, monsterFields, i);
+                }
+            }
+        }
+                
+        else if (monsterFields.ContainsKey(position))
+        {
+            Fight();
+            if (players[i].Character is Mage)
+            {
+                if (players[i].Character.SpecialPower() == 1)
+                {
+                    Move(players, debuffPoints, bonusPoints, monsterFields, i);
+                }
+            }
+        }
+
+        else
+        {
+            Console.WriteLine($"Trafiłeś na pole bez akcji.");
+            if (players[i].Character is Mage)
+            {
+                if (players[i].Character.SpecialPower() == 1)
+                {
+                    Move(players, debuffPoints, bonusPoints, monsterFields, i);
+                }
+            }
+        }
+
+        if (players[i].Character is Healer)
+        {
+            players[i].Character.PassiveSkill();
+        }
+    }
 
 }
 
@@ -56,12 +109,17 @@ class Dice
 {
     static public int RollMoveDice()
     {
-        return new Random().Next(0, 7);
+        var dice = new Random().Next(0,7);
+        Console.WriteLine($"Wyrzuciłeś: {dice}");
+        return dice;
+
     }
 
     static public int RollAttackMultiply()
     {
-        return new Random().Next(0, 7);
+        var multiplier = new Random().Next(0, 5);
+        Console.WriteLine($"Twój mnożnik ataku wynosi: {multiplier}");
+        return multiplier;
     }
     
 
