@@ -1,3 +1,5 @@
+using System.ComponentModel;
+
 namespace Gameplay;
 using Gameplay;
 using  Characters;
@@ -7,8 +9,8 @@ class Game
 {
     static private List<Player> CreateGame(int playersNumber)
     {
-        
-            var players = new List<Player>();
+
+        var players = new List<Player>();
             for (int i = 1; i <= playersNumber; i++)
             {
                 Console.WriteLine($"Podaj imie postaci gracza {i} : ");
@@ -37,15 +39,16 @@ class Game
 
             tury++;
         }
-        
+        ShowScore(players);
         
         
     }
 
-    public void Fight(Player player, Monster monster)
+    public static void Fight(Player player, Monster monster)
     {
         Console.WriteLine($"{player.Name} walczy z potworem!");
-
+        Console.WriteLine("kliknij enter aby rzucić kotką");
+        Console.ReadLine();
         Random random = new Random();
         int playerRoll = random.Next(1, 7);
         int monsterRoll = random.Next(1, 7);
@@ -64,8 +67,18 @@ class Game
         {
             Console.WriteLine($"{player.Name} został pokonany przez potwora!");
             int damage = monster.ATK;
-            player.HP -= damage;
-            Console.WriteLine($"{player.Name} traci {damage} zdrowia! Pozostałe zdrowie: {player.HP}");
+            if (player.Character.TakeDamage(damage) == 0)
+            {
+                Console.WriteLine($"{player.Name} został pokonany. Gracz traci połowe punktów i odzyskuje HP");
+                player.UpdateScore(-(player.Score/2));
+                player.Character.Defeat();
+
+            }
+            else
+            {
+                Console.WriteLine($"{player.Name} traci {damage} zdrowia! Pozostałe zdrowie: {player.Character.TakeDamage(damage)}");
+            }
+            
         }
         else
         {
@@ -75,7 +88,7 @@ class Game
 
     static public void Move(List<Player> players, Dictionary<int,int> debuffPoints,Dictionary<int,int> bonusPoints, Dictionary<int,Monster> monsterFields, int i)
     {
-        var position = players[i].CharacterMove(Dice.RollMoveDice());
+        var position = players[i].CharacterMove(Dice.RollMoveDice(players[i].Name));
 
         if (bonusPoints.ContainsKey(position))
         {
@@ -104,7 +117,7 @@ class Game
                 
         else if (monsterFields.ContainsKey(position))
         {
-            Fight();
+            Fight(players[i], monsterFields[position]);
             if (players[i].Character is Mage)
             {
                 if (players[i].Character.SpecialPower() == 1)
@@ -132,13 +145,30 @@ class Game
         }
     }
 
+
+    
+
+
+    static public void ShowScore(List<Player> players)
+    {
+        var sortedPlayers = players.OrderByDescending(p => p.Score);
+        int i = 1;
+        foreach (var player in sortedPlayers)
+        {
+            Console.WriteLine($"{i}. {player.Name} z wynikiem: {player.Score}");
+            i++;
+        }
+    }
+
 }
 
 class Dice
 {
-    static public int RollMoveDice()
+    static public int RollMoveDice(string name)
     {
         var dice = new Random().Next(0,7);
+        Console.WriteLine($"{name} kliknij enter aby rzucić kotką");
+        Console.ReadLine();
         Console.WriteLine($"Wyrzuciłeś: {dice}");
         return dice;
 
@@ -147,6 +177,8 @@ class Dice
     static public int RollAttackMultiply()
     {
         var multiplier = new Random().Next(0, 5);
+        Console.WriteLine("kliknij enter aby rzucić kotką");
+        Console.ReadLine();
         Console.WriteLine($"Twój mnożnik ataku wynosi: {multiplier}");
         return multiplier;
     }
