@@ -4,6 +4,10 @@ interface ICharacterType
 {
     public int SpecialPower();
     public void PassiveSkill();
+    
+    public int TakeDamage(int damage);
+
+    public void Defeat();
 
 }
 
@@ -40,6 +44,26 @@ class Mage : ICharacterType
     {
         //ja zakładam brak, chyba że znajdziesz jakiś pomysł
     }
+
+    public int TakeDamage(int damage)
+    {
+        HP -= damage;
+        if (HP <= 0)
+        {
+            
+            return 0;
+        }
+        else
+        {
+            return HP;
+        }
+        
+    }
+
+    public void Defeat()
+    {
+        HP = 300;
+    }
 }
 
 class Warrior : ICharacterType
@@ -68,11 +92,31 @@ class Warrior : ICharacterType
     {
         //ja zakładam brak, chyba że znajdziesz jakiś pomysł
     }
+    
+    public int TakeDamage(int damage)
+    {
+        HP -= damage;
+        if (HP <= 0)
+        {
+            
+            return 0;
+        }
+        else
+        {
+            return HP;
+        }
+        
+    }
+    
+    public void Defeat()
+    {
+        HP = 500;
+    }
 }
 
 class Healer : ICharacterType
 {
-    public int HP = 400;
+    public int HP = 350;
     public int ATK = 50;
     public int SPUse = 1;
     public int SpecialPower()
@@ -87,6 +131,31 @@ class Healer : ICharacterType
     {
         Console.WriteLine("Passywna umiejętność: zyskano 50 HP.");
         HP += 50;
+    }
+    
+    public int TakeDamage(int damage)
+    {
+        HP -= damage;
+        if (HP <= 0 && SPUse > 0)
+        {
+            SpecialPower();
+            return HP;
+        }
+        else if (HP <= 0)
+        {
+            
+            return 0;
+        }
+        else
+        {
+            return HP;
+        }
+        
+    }
+    
+    public void Defeat()
+    {
+        HP = 350;
     }
 }
 
