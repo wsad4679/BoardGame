@@ -13,7 +13,7 @@ class Player
         Character = ChooseCharacter();
     }
 
-    private void UpdateScore(int addScore)
+    public void UpdateScore(int addScore)
     {
         Score += addScore;
     }
