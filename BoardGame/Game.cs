@@ -38,10 +38,39 @@ class Game
             tury++;
         }
         
+        
+        
     }
 
-    static private void Fight()
+    public void Fight(Player player, Monster monster)
     {
+        Console.WriteLine($"{player.Name} walczy z potworem!");
+
+        Random random = new Random();
+        int playerRoll = random.Next(1, 7);
+        int monsterRoll = random.Next(1, 7);
+
+        Console.WriteLine($"{player.Name} wyrzucił: {playerRoll}");
+        Console.WriteLine($"Potwór wyrzucił: {monsterRoll}");
+
+        if (playerRoll > monsterRoll)
+        {
+            Console.WriteLine($"{player.Name} pokonał potwora!");
+            int reward = monster.RewardPoints;
+            player.UpdateScore(reward);
+            Console.WriteLine($"{player.Name} zdobywa {reward} punktów! Aktualny wynik: {player.Score}");
+        }
+        else if (playerRoll < monsterRoll)
+        {
+            Console.WriteLine($"{player.Name} został pokonany przez potwora!");
+            int damage = monster.ATK;
+            player.HP -= damage;
+            Console.WriteLine($"{player.Name} traci {damage} zdrowia! Pozostałe zdrowie: {player.HP}");
+        }
+        else
+        {
+            Console.WriteLine("Remis! Nikt nie wygrywa.");
+        }
     }
 
     static public void Move(List<Player> players, Dictionary<int,int> debuffPoints,Dictionary<int,int> bonusPoints, Dictionary<int,Monster> monsterFields, int i)

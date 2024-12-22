@@ -1,9 +1,10 @@
 namespace Characters;
 class Player
 {
-    private string Name { get; set; }
-    private int Position = 0;
-    private int Score = 0;
+    public string Name { get; set; }
+    public int Position = 0;
+    public int Score = 0;
+    //public int HP = ;//nie wiem jak dodac hp z klasy characters
     public ICharacterType Character { get; set; }
 
     public Player(string name)

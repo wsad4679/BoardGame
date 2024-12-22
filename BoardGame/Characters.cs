@@ -96,4 +96,5 @@ class Monster
     public int HP = new Random().Next(100, 500);
     public int ATK = new Random().Next(20, 100);
     public double points = new Random().Next(1,10);
+    public int RewardPoints = new Random().Next(1,10);
 }
