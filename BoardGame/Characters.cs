@@ -35,11 +35,7 @@ class Warrior : ICharacterType
             int attackMultiply = Dice.RollAttackMultiply();
             //attack()
         }
-        else
-        {
-            //attack()
-        }
-        
+       
         
     }
 

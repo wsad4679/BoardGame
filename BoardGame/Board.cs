@@ -25,7 +25,7 @@ class Board
         return bonusPointsFields;
     }
 
-    private Dictionary<int, int> Debuff(Dictionary<int, int> BonusPointsFields)
+    static public Dictionary<int, int> Debuff(Dictionary<int, int> bonusPointsFields)
     {
         int numbersOfBonusPoints = random.Next(1, 10);
         var minusPointsFields = new Dictionary<int, int>();
@@ -34,7 +34,7 @@ class Board
             int field = random.Next(1, 25);
             int points = random.Next(1,6);
 
-            if (!BonusPointsFields.ContainsKey(field) && !minusPointsFields.ContainsKey(field))
+            if (!bonusPointsFields.ContainsKey(field) && !minusPointsFields.ContainsKey(field))
             {
                 minusPointsFields.Add(field, points);
             }
@@ -44,13 +44,13 @@ class Board
         return minusPointsFields;
     }
 
-    private Dictionary<int, Monster> MonsterFields()
+    static public Dictionary<int, Monster> MonsterFields(Dictionary<int, int> bonusPointsFields, Dictionary<int, int> minusPointsFields)
     {
         var monsterFields = new Dictionary<int, Monster>();
         for (int i = 0; i <=5; i++)
         {
             int field = random.Next(1, 25);
-            if (!monsterFields.ContainsKey(field))
+            if (!monsterFields.ContainsKey(field) && !bonusPointsFields.ContainsKey(field) && !minusPointsFields.ContainsKey(field))
             {
                 monsterFields.Add(field, new Monster());
             }
