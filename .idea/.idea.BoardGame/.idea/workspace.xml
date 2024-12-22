@@ -11,14 +11,37 @@
       <change beforePath="$PROJECT_DIR$/.idea/.idea.BoardGame/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.BoardGame/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/Characters.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Characters.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/Game.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Game.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BoardGame/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/bin/Debug/net8.0/BoardGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/bin/Debug/net8.0/BoardGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/bin/Debug/net8.0/BoardGame.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/bin/Debug/net8.0/BoardGame.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/bin/Debug/net8.0/BoardGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/bin/Debug/net8.0/BoardGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/BoardGame.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/BoardGame.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/BoardGame.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/BoardGame.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.AssemblyInfo.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.GeneratedMSBuildEditorConfig.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.GeneratedMSBuildEditorConfig.editorconfig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.genruntimeconfig.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.genruntimeconfig.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.sourcelink.json" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/BoardGame.sourcelink.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/apphost.exe" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/apphost.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/ref/BoardGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/ref/BoardGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/refint/BoardGame.dll" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/refint/BoardGame.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/project.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/project.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BoardGame/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/project.packagespec.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/BoardGame/obj/rider.project.restore.info" beforeDir="false" afterPath="$PROJECT_DIR$/BoardGame/obj/rider.project.restore.info" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -29,12 +52,12 @@
     &quot;assignee&quot;: &quot;wsad4679&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/wsad4679/BoardGame.git",
-    "accountId": "991a1c67-21aa-407c-9759-753b48038177"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/wsad4679/BoardGame.git&quot;,
+    &quot;accountId&quot;: &quot;991a1c67-21aa-407c-9759-753b48038177&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/BoardGame/obj/Debug/net8.0/.NETCoreApp,Version=v8.0.AssemblyAttributes.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/korne/Desktop/BoardGame/BoardGame/BoardGame/obj/Debug/net8.0/BoardGame.AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
@@ -49,20 +72,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    ".NET Project.BoardGame.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;.NET Project.BoardGame.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="BoardGame" type="DotNetProject" factoryName=".NET Project">
       <option name="EXE_PATH" value="" />
