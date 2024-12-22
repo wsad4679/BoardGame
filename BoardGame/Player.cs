@@ -33,13 +33,14 @@ class Player
     {
         Console.WriteLine("Wybierz klasę swojej postaci: Mage, Warrior, Healer");
         string input = Console.ReadLine();
-        switch (input)
+        string newInput =  input.ToUpper();
+        switch (newInput)
         {
-            case "Mage":
+            case "MAGE":
                 return new Mage();
-            case "Warrior":
+            case "WARIOR":
                 return new Warrior();
-            case "Healer":
+            case "HEALER":
                 return new Healer();
             default:
                 Console.WriteLine("Nie ma takiej postaci. Wybrano domyślnie Warrior.");

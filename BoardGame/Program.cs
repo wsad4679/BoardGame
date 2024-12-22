@@ -9,7 +9,7 @@ internal class Program
 {
     public static void Main(string[] args)
     {
-        Game.PlayGame(4);
+        Game.PlayGame(1);
     }
 }
 
